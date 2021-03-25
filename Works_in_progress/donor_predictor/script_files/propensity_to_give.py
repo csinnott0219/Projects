@@ -18,47 +18,8 @@ from pandas_profiling import profile_report, ProfileReport
 import sweetviz as sv
 from streamlit_pandas_profiling import st_profile_report
 
-st.markdown(
-    """
-<style>
-.reportview-container .markdown-text-container {
-    
-    font-family: IBM Plex Sans;
-}
-.sidebar .sidebar-content {
-    background-image: url("https://www.kovifabrics.com/img/thumbs/797c835879623bd16ac825e62d203c22.JPG");
-    color: white;
-}
-.Widget>label {
-    color: white;
-    font-family: monospace;
-}
-[class^="st-b"]  {
-    color: white;
-    font-family: monospace;
-}
-.st-bb {
-    background-color: #edf0f5;
-}
-.st-at {
-    background-color: #3d393a;
-}
-footer {
-    font-family: monospace;
 
-}
-.reportview-container .main footer, .reportview-container .main footer a {
-    color: #013d29;
-}
-header .decoration {
-    background-image: url("https://img2.mahoneswallpapershop.com/prodimage/ProductImage/560/aecd25f8-4822-42ca-85f7-62d63cd41fc3.jpg");
-}
-
-</style>
-""",
-    unsafe_allow_html=True,
-)
-
+# introduction text
 st.title('Propensity to Give')
 st.text('by Corey J Sinnott')
 st.subheader('This app prepares dataframes, models and classifies, and\
@@ -212,7 +173,7 @@ def donor_predict_classification (df, model, imblearn_tool):
         st.write(f'F1-score  = {np.round(f1_score(y_test, y_pred), 3)}')
         st.write(f'ROC AUC   = {np.round(roc_auc_score(y_test, y_pred), 3)}')
         # st.write(f'{confusion_matrix(y_test, y_pred)} -> confusion matrix')
-        st.write(f'{(round(max(y_test.mean(), 1 - y_test.mean()), 2))*100}% null accuracy')
+        st.write(f'{round(max(y_test.mean(), 1 - y_test.mean()), 2)} Null accuracy')
         # graph confusion matrix
         # matrix = plot_confusion_matrix(model, X_test, y_test);
         # st.pyplot(f'Confusion matrix: {matrix}')
