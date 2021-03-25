@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 # import matplotlib.pyplot as plt
-import seaborn as sns
+# import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score, balanced_accuracy_score,\
@@ -15,7 +15,7 @@ import io
 import streamlit as st
 import streamlit.components.v1 as stc 
 from pandas_profiling import profile_report, ProfileReport
-import sweetviz as sv
+# import sweetviz as sv
 from streamlit_pandas_profiling import st_profile_report
 
 st.markdown(
