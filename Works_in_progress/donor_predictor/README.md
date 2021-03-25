@@ -23,7 +23,7 @@ Scoring more false positives is considered ideal as the likelihood of missing a 
 
 Next, feature importances were extracted and graphed (notebook 04). The most important feature was 'isClassDDonor' followed by 'NetWorth'. After extracting features, probabilities were calculated for candidate. This value is of great importance, and can be considered when determining additional donor close to being classified as elite donors.
 
-Finally, all of the steps above were scripted and deployed using Streamlit. The application can be found in this repository. Futhermore, an analyst could download the script and run it on their local machine via their terminal ($ streamlit run propensity_to_give.py).
+Finally, all of the steps above were scripted and deployed using Streamlit. The application script can be found in this repository, and the app can be used here: https://share.streamlit.io/csinnott0219/projects/main/Works_in_progress/donor_predictor/script_files/propensity_to_give.py. Futhermore, an analyst could download the script and run it on their local machine via their terminal ($ streamlit run propensity_to_give.py).
 
 The findings from this analysis can be used by clients to target elite donors. Furthermore, using the extracted features and propabilities, a client could identify future elite donors as well, or use the predictive model to classify new donors as data becomes available.
 

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-# import matplotlib.pyplot as plt
-# import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score, balanced_accuracy_score,\
@@ -15,7 +15,7 @@ import io
 import streamlit as st
 import streamlit.components.v1 as stc 
 from pandas_profiling import profile_report, ProfileReport
-# import sweetviz as sv
+import sweetviz as sv
 from streamlit_pandas_profiling import st_profile_report
 
 st.markdown(
@@ -38,7 +38,7 @@ st.markdown(
     font-family: monospace;
 }
 .st-bb {
-    background-color: #d19da6;
+    background-color: #edf0f5;
 }
 .st-at {
     background-color: #3d393a;
@@ -295,10 +295,10 @@ if show_upload:
     if uploaded_file_1 is not None and uploaded_file_2 is not None:
         df_donations = pd.read_csv(uploaded_file_1)
         df_features = pd.read_csv(uploaded_file_2)
-        
+    
 # initiating script
-# if button:
-    # pre-processing
+
+        # pre-processing
         df_donations_classed = define_target(df_donations)
         df_final = df_combiner(df_features, df_donations_classed)
         # EDA and visuals
